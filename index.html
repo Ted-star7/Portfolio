@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6d64cd80fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
  <header>
@@ -14,21 +15,27 @@
 
   <div class="title">
     
-      <div><a href="#" class="a-tags">HOME</a></div>
-      <div><a href="#"class="a-tags">ABOUT</a></div>
-      <div><a href="#"class="a-tags">SERVICES</a></div>
-      <div><a href="#"class="a-tags">PROJECTS</a></div>
-       <div><a href="#"class="a-tags">PORTFOLIO</a></div>
+      <div><a href="#HOME" class="a-tags">HOME</a></div>
+      <div><a href="#ABOUT"class="a-tags">ABOUT</a></div>
+      <div><a href="#SERVICES"class="a-tags">SERVICES</a></div>
+      <div><a href="#PORTFOLIO"class="a-tags">PORTFOLIO</a></div>
+       <div><a href="#CONTACT"class="a-tags">CONTACT</a></div>
     
   </div>
   </nav>
-  <div class="headline"
-    <p>UI/UX DESIGNER</p>
-    <br>
-    <H1>Hi, my name is Teddy Kibuthu </H1><br>
-    <h2>Welcome to my digital playground, where lines of code come to life, and innovation knows no bounds! 🌟</h2><br>
-    <h2>💡 Behind every project is a story waiting to be told, and my portfolio is a treasure trove of these tales</h2>
+ <div id="HOME">
+  <div class="headline">
+    <div class="headline-inner">
+
+      
+      <p>UI/UX DESIGNER</p>
+      <br>
+      <H1>Hi, my name is Teddy Kibuthu </H1><br>
+      <h2>Welcome to my digital playground, where lines of code come to life, and innovation knows no bounds! 🌟</h2><br>
+      <h2>💡 Behind every project is a story waiting to be told, and my portfolio is a treasure trove of these tales</h2>
+    </div>
   </div>
+</div>
 
   <!-- -------about----- -->
 
@@ -61,13 +68,94 @@
   <div class="red">
     <h1 class="top">My Services</h1>
     <!-- <h1 class="sub-title">My Services</h1> -->
-    <div class="services list">
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web designer</h2>
+        <p> I speak the languages of the digital realm fluently.<br> Whether it's crafting dynamic front-end interfaces using HTML, CSS, and JavaScript, or back-end systems with Python, Node.js,</p>
+      </div>
+      <div>
+        <i class="fa-brands fa-python"></i>
+        <h2>Machine Learning</h2>
+        <p> I've ventured into the realms of machine learning.<br> From developing predictive models to unlocking hidden patterns in data, I'm passionate about harnessing the potential of AI to create smarter, more efficient web applications.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>🎨 UI/UX Designer</h2>
+        <p>My design journey is as compelling as my coding journey. I believe that beautiful code deserves an equally beautiful user interface.<br> I create user-centric designs that not only captivate the eye but also elevate the user experience</p>
 
-    </div>
+      </div>
+  
 
   </div>
 </div>
+   
+<!-- ----------Portfolio--------- -->
+
+<div id="PORTFOLIO">
+  <div class="meg">
+    <h1 class="top">My Work</h1>
+    <div class="work-list">
+      <div class="mechg">
+        <img src="/Screenshot 2023-09-26 114154.png" >
+        <P>Hands of compassion website</P>
+        <p>For Donations and Support</p>
+        <a href="#"><i class="fa-solid fa-link"></i></a>
+      </div>
+      <div class="mechg">
+        <img src="/Screenshot_20230503_123623_Instagram.jpg" >
+        <a href="#"><i class="fa-solid fa-link"></i></a>
+      </div>
+      <div class="mechg">
+        <img src="/Screenshot_20230503_123642_Instagram.jpg" >
+        <a href="#"><i class="fa-solid fa-link"></i></a>
+      </div>
+    </div>
+  </div>
   
+</div>
+
+<!-- ----------CONTACT------- -->
+<div id="CONTACT">
+  <div class="rodolfo">
+  <div class="contact-left">
+    <h1 class="top">Contact</h1>
+    <p>Thank you for visiting my portfolio!<br> If you have any questions, inquiries, or if you'd like to collaborate on a project.<br> Feel free to reach out through any of the following methods:</p>
+    <br>
+    <p><i class="fa-solid fa-paper-plane fa-beat-fade"></i></i>kibuthuteddy@gmail.com</p>
+    <br>
+    <p><i class="fa-solid fa-phone fa-beat"></i>+254705171490</p>
+  </div>
+<div class="icons">
+  <a href=""><i class="fa-solid fa-envelope"></i></a>
+  <a href=""><i class="fa-brands fa-instagram"></i></a>
+  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+  <a href=""><i class="fa-brands fa-github"></i></a>
+  <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+
+
+<div class="contact-right">
+  <form>
+    <input type="text" name="Name" placeholder="Your name">
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="Message"  rows="8" placeholder="Your Message"></textarea>
+    <button type="submit" class="button">Submit</button>
+  </form>
+</div>
+
+
+ </div>
+</div>
+
+<div class="CV">
+  <a href="/CURRICULUM VITAE.docx" download class="button">Download CV</a>
+</div>
+
+<div class="copyright">
+  <p>&copy; 2023. Teddy Kibuthu. All Rights Reserved</p>
+</div>
   
  </header>
 </body>

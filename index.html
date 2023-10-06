@@ -5,8 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/6d64cd80fe.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./contact.js">
+  <!-- <script src="contact.js" type="text/javascript"></script> -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('xoTOjhiMuKaH2fDly');
+        })();
+    </script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+               
+                emailjs.sendForm('service_rxb9t08', 'template_jvth4jw', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                         alert('Message sent successfully!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                         alert('Failed to send message!');
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
  <header>
@@ -19,9 +46,11 @@
       <div><a href="#ABOUT"class="a-tags">ABOUT</a></div>
       <div><a href="#SERVICES"class="a-tags">SERVICES</a></div>
       <div><a href="#PORTFOLIO"class="a-tags">PORTFOLIO</a></div>
-       <div><a href="#CONTACT"class="a-tags">CONTACT</a></div>
-    
+      <div><a href="#CONTACT"class="a-tags">CONTACT</a></div>
+
+   
   </div>
+
   </nav>
  <div id="HOME">
   <div class="headline">
@@ -104,10 +133,12 @@
       </div>
       <div class="mechg">
         <img src="/Screenshot_20230503_123623_Instagram.jpg" >
+        <p>Machine learning,using python libraries</p>
         <a href="#"><i class="fa-solid fa-link"></i></a>
       </div>
       <div class="mechg">
         <img src="/Screenshot_20230503_123642_Instagram.jpg" >
+        <p>UI/UX design in progress</p>
         <a href="#"><i class="fa-solid fa-link"></i></a>
       </div>
     </div>
@@ -127,21 +158,22 @@
     <p><i class="fa-solid fa-phone fa-beat"></i>+254705171490</p>
   </div>
 <div class="icons">
-  <a href=""><i class="fa-solid fa-envelope"></i></a>
-  <a href=""><i class="fa-brands fa-instagram"></i></a>
-  <a href=""><i class="fa-brands fa-linkedin"></i></a>
-  <a href=""><i class="fa-brands fa-github"></i></a>
+  <!-- <a href=""><i class="fa-solid fa-envelope"></i></a> -->
+  <a href="https://instagram.com/bigted_teddy?igshid=NzZlODBkYWE4Ng==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/teddy-kibuthu-926959287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://github.com/Ted-star7" target="_blank"><i class="fa-brands fa-github"></i></a>
   <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+  
 </div>
 
 
 
 <div class="contact-right">
-  <form>
-    <input type="text" name="Name" placeholder="Your name">
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="Message"  rows="8" placeholder="Your Message"></textarea>
-    <button type="submit" class="button">Submit</button>
+  <form id="contact-form">
+    <input type="text" id="Name" placeholder="Full Name" name="user_name"/>
+    <input type="email" id="email" placeholder="Email id" required name="user_email"/>
+    <textarea id="Message"  rows="8" placeholder="Message" name="message"></textarea>
+    <input type="submit" class="button" value="Send"/>
   </form>
 </div>
 
@@ -154,9 +186,10 @@
 </div>
 
 <div class="copyright">
-  <p>&copy; 2023. Teddy Kibuthu. All Rights Reserved</p>
+  <p>&copy; Teddy Kibuthu. 2023. All Rights Reserved</p>
 </div>
-  
+
+
  </header>
 </body>
 </html>
